@@ -1,0 +1,31 @@
+
+<?php 
+
+session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$conn = new mysqli($servername, $username, $password, "robotdb");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+ ?>
+<html>
+<head>
+	<title>Control Robot</title>
+	
+	<script src="javascript.js"></script>	
+	<link rel="stylesheet" type="text/css" href="stylefile.css">
+</head>
+<BODY>
+<div id="header" >
+	<img src="logo1.png" id="logoImg" />
+</div>
+<div id="link" >
+	<ul id="menuList" >
+	  <li><a href="Home.php">Home</a></li>
+	  <li><a href="econtrol.php">Engine Control</a></li>
+	  <li><a href="acontrol.php">Angle Control</a></li>
+	</ul>
+</div>
